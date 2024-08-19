@@ -5,6 +5,7 @@ import { useMutation, useQuery } from "@tanstack/react-query";
 import { createTodo, getTodos } from "actions/todo-actions";
 import Todo from "components/todo";
 import { useState } from "react";
+import SearchComponent from "../components/search-component";
 
 export default function UI() {
   const [searchInput, setSearchInput] = useState("");
@@ -28,12 +29,9 @@ export default function UI() {
   return (
     <div className="w-2/3 mx-auto h-2 flex flex-col items-center py-10 gap-2">
       <h1 className="text-xl">TODO LIST</h1>
-      <Input
-        label="Search TODO"
-        placeholder="Search TODO"
-        icon={<i className="fas fa-search" />}
-        value={searchInput}
-        onChange={(e) => setSearchInput(e.target.value)}
+      <SearchComponent
+        searchInput={searchInput}
+        setSearchInput={setSearchInput}
       />
 
       {todosQuery.isPending && <p>Loading...</p>}

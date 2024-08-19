@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "config/material-tailwind-theme-provide";
+import { ThemeProvider } from "components/material-tailwind-theme-provide";
 import ReactQueryClientProvider from "config/ReactQueryClientProvider";
 
 const inter = Inter({ subsets: ["latin"] });
