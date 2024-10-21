@@ -41,6 +41,8 @@ export default function UI() {
       <Button
         onClick={() => createTodoMutation.mutate()}
         loading={createTodoMutation.isPending}
+        onPointerEnterCapture={() => {}} // Added empty function
+        onPointerLeaveCapture={() => {}} // Added empty function
       >
         <i className="fas fa-plus mr-2" />
         Add TODO
